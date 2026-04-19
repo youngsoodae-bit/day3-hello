@@ -1,94 +1,269 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프로웍스 | 전문 컨설팅 서비스</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Curator - 고해상도 에디토리얼 경험</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#191b23",
+                        "secondary-container": "#b6c8fe",
+                        "outline-variant": "#c3c6d6",
+                        "tertiary-fixed": "#ffdbcf",
+                        "inverse-on-surface": "#f0f0fb",
+                        "primary-container": "#0052cc",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e1e2ec",
+                        "surface-container-high": "#e7e7f2",
+                        "tertiary-container": "#a33500",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "surface-bright": "#faf8ff",
+                        "primary-fixed": "#dae2ff",
+                        "on-secondary-fixed": "#021945",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#ededf8",
+                        "surface-tint": "#0c56d0",
+                        "on-primary-container": "#c4d2ff",
+                        "surface": "#faf8ff",
+                        "outline": "#737685",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#380d00",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "secondary-fixed": "#dae2ff",
+                        "on-secondary-fixed-variant": "#344573",
+                        "surface-variant": "#e1e2ec",
+                        "on-background": "#191b23",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#415382",
+                        "secondary-fixed-dim": "#b4c5fb",
+                        "surface-container-low": "#f3f3fd",
+                        "background": "#faf8ff",
+                        "secondary": "#4c5d8d",
+                        "surface-dim": "#d9d9e4",
+                        "on-surface-variant": "#434654",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#812800",
+                        "inverse-surface": "#2e3038",
+                        "inverse-primary": "#b2c5ff",
+                        "on-tertiary-container": "#ffc6b2",
+                        "on-primary-fixed": "#001848",
+                        "primary": "#003d9b",
+                        "tertiary": "#7b2600"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #faf8ff; color: #191b23; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
 </head>
-<body class="bg-white text-slate-800">
-
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center px-6">
-        <div class="max-w-3xl text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
-                비즈니스의<br>다음 단계를 만듭니다
-            </h1>
-            <p class="text-lg md:text-xl text-slate-600 mb-10">
-                전문 컨설팅으로 성장 전략을 설계하고, 실행을 지원합니다.
-            </p>
-            <a href="#contact" class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-colors">
-                무료 상담 신청
-            </a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="py-20 px-6 bg-slate-50">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12">서비스</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-3xl mb-4">&#x1f4ca;</div>
-                    <h3 class="text-xl font-semibold mb-3">전략 컨설팅</h3>
-                    <p class="text-slate-600">시장 분석과 경쟁사 연구를 기반으로 맞춤형 성장 전략을 수립합니다.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-3xl mb-4">&#x1f4c8;</div>
-                    <h3 class="text-xl font-semibold mb-3">운영 최적화</h3>
-                    <p class="text-slate-600">업무 프로세스를 분석하고 효율적인 운영 체계를 구축합니다.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-3xl mb-4">&#x1f91d;</div>
-                    <h3 class="text-xl font-semibold mb-3">디지털 전환</h3>
-                    <p class="text-slate-600">디지털 도구 도입과 데이터 기반 의사결정 체계를 지원합니다.</p>
-                </div>
+<body class="bg-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1440px] mx-auto">
+<div class="text-2xl font-extrabold tracking-tighter text-[#003d9b] dark:text-blue-500 font-headline">
+                The Curator
             </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="py-20 px-6">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12">왜 프로웍스인가</h2>
-            <ul class="space-y-5">
-                <li class="flex items-start gap-3">
-                    <span class="text-indigo-600 font-bold text-xl mt-0.5">&#10003;</span>
-                    <span class="text-lg text-slate-700">10년 이상의 산업별 컨설팅 경험</span>
-                </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-indigo-600 font-bold text-xl mt-0.5">&#10003;</span>
-                    <span class="text-lg text-slate-700">삼성, LG 등 대기업 프로젝트 수행</span>
-                </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-indigo-600 font-bold text-xl mt-0.5">&#10003;</span>
-                    <span class="text-lg text-slate-700">데이터 기반의 객관적 분석 방법론</span>
-                </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-indigo-600 font-bold text-xl mt-0.5">&#10003;</span>
-                    <span class="text-lg text-slate-700">프로젝트 완료 후 6개월 무료 후속 지원</span>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="contact" class="py-20 px-6 bg-indigo-600">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-white mb-6">지금 시작하세요</h2>
-            <p class="text-indigo-100 text-lg mb-10">
-                첫 상담은 무료입니다. 비즈니스 과제를 함께 해결해 보세요.
-            </p>
-            <a href="mailto:hello@proworks.kr" class="inline-block bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-50 transition-colors">
-                hello@proworks.kr 로 문의
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 px-6 bg-slate-900 text-slate-400 text-center text-sm">
-        <p>&copy; 2026 프로웍스. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+<div class="hidden md:flex space-x-10 items-center">
+<a class="font-['Manrope'] font-bold text-lg tracking-tight text-[#003d9b] dark:text-blue-400 border-b-2 border-[#0052CC] pb-1" href="#">서비스 소개</a>
+<a class="font-['Manrope'] font-bold text-lg tracking-tight text-slate-600 dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">핵심 가치</a>
+<a class="font-['Manrope'] font-bold text-lg tracking-tight text-slate-600 dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">기능 안내</a>
+<a class="font-['Manrope'] font-bold text-lg tracking-tight text-slate-600 dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">고객 사례</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-bold hover:bg-primary-container transition-all scale-95 active:scale-90 duration-300">
+                시작하기
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-8 overflow-hidden">
+<div class="max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold text-sm tracking-wide">
+                        NEW EDITORIAL EXPERIENCE
+                    </div>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold text-on-surface leading-[1.1] tracking-tighter mb-8">
+                        정보를 넘어선 <br/><span class="text-primary italic">예술적 큐레이션</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl mb-12 font-body font-light">
+                        The Curator는 단순한 데이터 나열을 거부합니다. 당신의 콘텐츠를 가장 권위 있는 매거진처럼, 가장 감각적인 갤러리처럼 재구성하는 독보적인 경험을 제공합니다.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-xl text-lg font-bold shadow-2xl shadow-primary/20 hover:translate-y-[-2px] transition-all">
+                            무료로 시작하기
+                        </button>
+<button class="bg-surface-container-high text-on-surface px-10 py-5 rounded-xl text-lg font-bold hover:bg-surface-container-highest transition-all flex items-center justify-center gap-2">
+                            서비스 둘러보기 <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] rounded-[3rem] bg-surface-container-high overflow-hidden shadow-2xl relative">
+<img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="minimalist modern editorial office with large windows soft natural lighting and sophisticated furniture in neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAh_yo-2jUt_ZR-MKgN0PsgZOkkVDlgHsIYkzHFIG3QFm61ro_yrlMW489heKeYp20KVRN5bwDqCQit7iYjFIDccTRXvtu0cb80bWSa57pYlwOUbIGfjoMxyij1ESrd2mfJ1E6rLEab3VJpwyRZss1_4mNT_AX3ajg2X1OooyX0YHBzAtuK_y6t6TTaS45QpWoLhtHnivganujMERAnT9hVix3pz6e-U0_ftI2y1dDZqV1lKaI6sZny4zxkXFbMpZJ8PJJG26EXMyG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+<!-- Decorative Floating Element -->
+<div class="absolute -bottom-10 -left-10 p-8 rounded-3xl bg-surface-container-lowest shadow-xl max-w-[240px] hidden xl:block">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<div class="font-headline font-bold text-on-surface">Smart Flow</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-tight">자동으로 최적화되는 에디토리얼 그리드 시스템</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Strengths / Bento Grid -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-[1440px] mx-auto">
+<div class="mb-20 text-center">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-6 tracking-tight">비교할 수 없는 디테일의 차이</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto">우리는 픽셀 하나에도 의도를 담습니다. 정보의 위계와 시각적 즐거움을 동시에 만족시키는 기술력을 경험하세요.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Strength Card 1 -->
+<div class="group bg-surface-container-lowest p-10 rounded-[2.5rem] transition-all hover:translate-y-[-10px]">
+<div class="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">grid_view</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4">비대칭 그리드 시스템</h3>
+<p class="text-on-surface-variant leading-relaxed">정형화된 틀을 벗어나 콘텐츠의 성격에 맞춰 유동적으로 변화하는 지능형 레이아웃 엔진을 탑재했습니다.</p>
+</div>
+<!-- Strength Card 2 -->
+<div class="group bg-surface-container-lowest p-10 rounded-[2.5rem] transition-all hover:translate-y-[-10px]">
+<div class="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">auto_stories</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4">내러티브 타이포그래피</h3>
+<p class="text-on-surface-variant leading-relaxed">가독성을 넘어 문장의 뉘앙스까지 전달하는 정교한 폰트 위계와 자간/행간 시스템을 제공합니다.</p>
+</div>
+<!-- Strength Card 3 -->
+<div class="group bg-surface-container-lowest p-10 rounded-[2.5rem] transition-all hover:translate-y-[-10px]">
+<div class="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">blur_on</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4">고급스러운 질감 제어</h3>
+<p class="text-on-surface-variant leading-relaxed">단순한 색상이 아닌, 빛과 유리의 질감을 담은 글래스모피즘 효과로 정보에 깊이감을 부여합니다.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Content Section -->
+<section class="py-32 px-8 bg-surface overflow-hidden">
+<div class="max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="order-2 lg:order-1">
+<div class="grid grid-cols-2 gap-6">
+<div class="aspect-square rounded-[2rem] bg-surface-container-high overflow-hidden shadow-lg transform translate-y-12">
+<img alt="" class="w-full h-full object-cover" data-alt="close-up of elegant typography in a high-end fashion magazine with sharp focus and clean layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDJTAxv-X858rpQs-HRtRrMx0yo2wImjskIKAAHST2shp8-Xr12fgjHQzUyzROvXdn4AbVkw5YEPGBOUrlVfCV8i33XZEmN5BknPASoq_CkZAm8FCWgZVwAoxf9Y1LCF_oZXnPFiT7y9MOXBPP79_Y9aiQWA4WJC8BeWpVwKRg_PR6DC4flLUbZ4EgngynzBDqMU25kQaDEE2TK4AYvwmE8hd5x6JSSl4_Nc_7srnbdayNJvnjalc2mnc2UI4LnSsDCchCPGYZhVyE"/>
+</div>
+<div class="aspect-square rounded-[2rem] bg-surface-container-highest overflow-hidden shadow-lg">
+<img alt="" class="w-full h-full object-cover" data-alt="abstract architectural details of a modern museum with sweeping curves and minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVyAz-KvzAeCXrQrR4kCOhX8GTn6H_BsMmTNYPGcd1HbVW7F2q0q92GDWSn5_rri3Ldj1Z9rVhW7zCjfk9_j6EkjJbiRrJonfDjg1E7IV_owZoe7_UWJdJPMKOJXLNNGbndjutkJ0uidooVTpNq7WvS0qKQY1gDp8R2JCcU5PCV_L_NTsrKnXU_KQPME9QXHUZbqbdXy7KEf0ZCjzp3dSrmd9qYAlyBJTaOEQDHb8QjWnsds91a8XGPYh01DP3PINsqreNuOyea4pt"/>
+</div>
+<div class="col-span-2 aspect-[16/9] rounded-[2rem] bg-primary-fixed overflow-hidden shadow-lg mt-6">
+<img alt="" class="w-full h-full object-cover" data-alt="professional workspace with high-end digital monitors showing complex UI designs and creative software" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRLX95E5csuF8pcCDUJ73Vr8eogZ2-mQ4NqAccQcynwvHfo_YBWyPa8rjKfYE0XQnvYsTiR53o9c9AZB8nm-_cV6056JpoHQllttGDlidCx4W2NMd3-BarqcbPL-78dcs4xJXQBH8iPyqIklMtD0KQnkQsicnkYesm5CP3RD7ulbyKIyqECEOijuOL25ceNqgW54eWm3RSdTGcIWqUHC6xgxUA18ID7BcpaTV90vTPNyZHET906VvT_QblrduWG46pOtUEbVWgZ3Qh"/>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="text-primary font-bold tracking-widest text-sm mb-6 block">CORE VALUE</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-8 leading-tight">당신의 비즈니스를 <br/>하나의 브랜드 가치로</h2>
+<div class="space-y-10">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold mb-2">프리미엄 브랜드 아이덴티티</h4>
+<p class="text-on-surface-variant leading-relaxed">글로벌 하이엔드 브랜드들이 지향하는 미니멀리즘과 여백의 미를 당신의 서비스에 즉시 적용합니다.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold mb-2">몰입형 사용자 여정</h4>
+<p class="text-on-surface-variant leading-relaxed">단순한 클릭이 아닌, 한 편의 이야기를 읽어 내려가는 듯한 매끄러운 스크롤 경험을 설계합니다.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold mb-2">데이터 시각화의 정수</h4>
+<p class="text-on-surface-variant leading-relaxed">복잡한 수치와 정보를 직관적이면서도 심미적으로 아름다운 그래픽으로 자동 변환합니다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-32 px-8">
+<div class="max-w-[1200px] mx-auto bg-[#003d9b] rounded-[4rem] p-16 md:p-24 text-center relative overflow-hidden shadow-2xl">
+<!-- Decorative Circle -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-container/30 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-6xl font-headline font-bold text-white mb-8 tracking-tighter">지금 바로 당신의 가치를 <br/>큐레이션 하세요.</h2>
+<p class="text-white/80 text-xl max-w-2xl mx-auto mb-12 font-light">
+                        The Curator와 함께라면 당신의 모든 콘텐츠는 특별한 경험이 됩니다. 전문가들의 선택을 받은 디자인 엔진을 지금 경험해 보세요.
+                    </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-white text-primary px-12 py-5 rounded-2xl text-xl font-bold hover:bg-slate-100 transition-all shadow-xl">
+                            시작하기
+                        </button>
+<button class="bg-transparent border border-white/30 text-white px-12 py-5 rounded-2xl text-xl font-bold hover:bg-white/10 transition-all backdrop-blur-sm">
+                            데모 신청하기
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#faf8ff] dark:bg-slate-950 w-full rounded-t-[2rem] flex flex-col md:flex-row justify-between items-center px-12 py-16 mt-20 border-t border-slate-100 dark:border-slate-800">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-['Manrope'] font-bold text-xl text-slate-900 dark:text-slate-100 mb-2">The Curator</div>
+<p class="font-['Inter'] text-sm leading-relaxed text-slate-500 max-w-sm">© 2024 The Curator. All rights reserved. 고해상도 에디토리얼 경험을 선사합니다.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<a class="font-['Inter'] text-sm leading-relaxed text-slate-400 hover:text-[#0052CC] dark:hover:text-blue-400 transition-colors" href="#">이용약관</a>
+<a class="font-['Inter'] text-sm leading-relaxed text-slate-400 hover:text-[#0052CC] dark:hover:text-blue-400 transition-colors" href="#">개인정보처리방침</a>
+<a class="font-['Inter'] text-sm leading-relaxed text-slate-400 hover:text-[#0052CC] dark:hover:text-blue-400 transition-colors" href="#">쿠키 정책</a>
+<a class="font-['Inter'] text-sm leading-relaxed text-slate-400 hover:text-[#0052CC] dark:hover:text-blue-400 transition-colors" href="#">문의하기</a>
+</div>
+</footer>
+</body></html>
